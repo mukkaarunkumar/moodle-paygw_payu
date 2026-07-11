@@ -63,7 +63,9 @@ if (!hash::verify_callback_hash($txnid, $hash)) {
 }
 
 $PAGE->set_context(null);
-$PAGE->set_url(new moodle_url('/payment/gateway/payu/callback.php', ['s' => $success, 'f' => $failure, 'component' => $component, 'paymentarea' => $paymentarea, 'itemid' => $itemid]));
+$PAGE->set_url(new moodle_url('/payment/gateway/payu/callback.php',
+    ['s' => $success, 'f' => $failure, 'component' => $component,
+    'paymentarea' => $paymentarea, 'itemid' => $itemid]));
 
 try {
     $config = helper::get_gateway_configuration($component, $paymentarea, $itemid, 'payu');
