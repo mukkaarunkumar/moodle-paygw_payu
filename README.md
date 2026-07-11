@@ -27,7 +27,7 @@ After you download the plugin.
 4. Create a payment account.
 5. On the available payment account or the one that you've been created. Beside account name you'll see payment gateways column. Click on PayU.
 6. Set **Enable** to be checked.
-7. Input **key** as Merchant Key, **Salt** as Merchant Salt.
+7. Input **Merchant Key** as Key, **Merchant Salt** as Salt.
 8. Then don't forget to set it in the right **environment**.
 
 >***Please note, if you set wrong environment the access would be denied on payment.*
