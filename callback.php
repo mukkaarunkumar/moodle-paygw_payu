@@ -98,7 +98,7 @@ try {
     }
 
     echo $OUTPUT->header();
-        $data = new stdClas();
+        $data = new stdClass();
         $data->success = false;
         $data->failed = true;
         $data->redirecturl = $CFG->wwwroot;
