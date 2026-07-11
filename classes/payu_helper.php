@@ -296,7 +296,7 @@ class payu_helper {
             'firstname' => $USER->firstname,
             'lastname' => $USER->lastname,
             'email' => $USER->email,
-            'phone' => $USER->phone1,
+            'phone' => $USER->phone1 ?? null,
             'surl' => $surl->out(false),
             'furl' => $furl->out(false),
         ];
@@ -367,7 +367,7 @@ class payu_helper {
          */
         $request['hash'] = $this->generate_request_hash($request);
 
-        logger::debug(
+        logger::info(
             'PayU payment request created.',
             [
                 'txnid' => $request['txnid'],
@@ -404,8 +404,6 @@ class payu_helper {
             );
             
         }
-
-        return [];
     }
 
     /**
