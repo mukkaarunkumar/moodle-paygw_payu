@@ -47,13 +47,6 @@ final class logger {
      * @return void
      */
     public static function debug(string $message, array $context = []): void {
-
-        $config = get_config('paygw_payu');
-
-        if (empty($config->debug)) {
-            return;
-        }
-
         self::write('DEBUG', $message, $context);
     }
 
