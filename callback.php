@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     throw new moodle_exception('invalidrequest', 'paygw_payu');
 }
 
-if (hash::verify_callback_hash($txnid, $hash)) {
+if (!hash::verify_callback_hash($txnid, $hash)) {
     throw new moodle_exception('invalidrequest', 'core_error');
 }
 
