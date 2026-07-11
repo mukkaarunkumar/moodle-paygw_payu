@@ -31,18 +31,3 @@ if ($ADMIN->fulltree) {
     \core_payment\helper::add_common_gateway_settings($settings, 'paygw_payu');
 }
 
-if ($ADMIN->fulltree) {
-    $settings->add(new admin_setting_heading(
-        'paygw_payu/api',
-        get_string('apisettings', 'paygw_payu'),
-        ''
-    ));
-
-    $settings->add(new admin_setting_configtext(
-        'paygw_payu/requesttimeout',
-        get_string('requesttimeout', 'paygw_payu'),
-        get_string('requesttimeout_desc', 'paygw_payu'),
-        30,
-        PARAM_INT
-    ));
-}

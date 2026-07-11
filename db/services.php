@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Web services for this plugin.
+ * External functions and service definitions for the Payu payment gateway plugin.
  *
  * @package    paygw_payu
  * @copyright  2026 Mukka Arun Kumar <arunkumar.mukka@gmail.com>
@@ -32,10 +32,17 @@ $functions = [
         'type'        => 'write',
         'ajax'        => true,
     ],
-    'paygw_payu_process_payment' => [
-        'classname'   => 'paygw_payu\external\process_payment',
+    'paygw_payu_order_initiated' => [
+        'classname'   => 'paygw_payu\external\order_initiated',
         'classpath'   => '',
-        'description' => 'process_payment',
+        'description' => 'order_initiated',
+        'type'        => 'write',
+        'ajax'        => true,
+    ],
+    'paygw_payu_transaction_complete' => [
+        'classname'   => 'paygw_payu\external\transaction_complete',
+        'classpath'   => '',
+        'description' => 'transaction_complete',
         'type'        => 'write',
         'ajax'        => true,
     ],

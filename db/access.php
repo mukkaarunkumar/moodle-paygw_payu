@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Capability definitions for this plugin.
+ * Capability definitions for PayU payment gateway.
  *
  * @package    paygw_payu
  * @copyright  2026 Mukka Arun Kumar <arunkumar.mukka@gmail.com>
@@ -28,6 +28,14 @@ $capabilities = [
     'paygw/payu:manage' => [
         'riskbitmask' => RISK_CONFIG,
         'captype' => 'write',
+        'contextlevel' => CONTEXT_SYSTEM,
+        'archetypes' => [
+            'manager' => CAP_ALLOW,
+        ],
+    ],
+    'paygw/payu:viewtransactions' => [
+        'riskbitmask' => RISK_PERSONAL,
+        'captype' => 'read',
         'contextlevel' => CONTEXT_SYSTEM,
         'archetypes' => [
             'manager' => CAP_ALLOW,

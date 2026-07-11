@@ -24,13 +24,14 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['apisettings'] = 'API Configuration';
 $string['clientid'] = 'Client ID';
 $string['clientid_desc'] = 'Client ID created on Payu developer dashboard';
 $string['clientsecret'] = 'Client Secret';
 $string['clientsecret_desc'] = 'Client Secret created on Payu developer dashboard';
 $string['environment'] = 'Environment';
 $string['environment_help'] = 'Select Sandbox or Production mode.';
+$string['event:payment_completed'] = 'Payment completed with PayU';
+$string['event:payment_completed_desc'] = 'The user with id \'{$a->userid}\' completed a PayU payment with id \'{$a->objectid}\' for \'{$a->component}\' (transaction \'{$a->txnid}\', reference \'{$a->mihpayid}\').';
 $string['gatewayname'] = 'PayU';
 $string['gatewaydescription'] = 'PayU is an authorised payment gateway provider for processing Payments.';
 $string['generalsettings'] = 'General Settings';
@@ -39,9 +40,9 @@ $string['merchantkey_help'] = 'Merchant key provided by PayU.';
 $string['merchantsalt'] = 'Merchant Salt';
 $string['merchantsalt_help'] = 'Merchant salt provided by PayU.';
 $string['merchantsettings'] = 'Merchant Configuration';
+$string['paymentsuccessful'] = 'Payment Success';
+$string['paymentfailed'] = 'Payment Failed';
 $string['pluginname'] = 'PayU';
 $string['pluginname_desc'] = 'The PayU plugin allows you to receive payments via PayU';
 $string['production'] = 'Production';
-$string['requesttimeout'] = 'Request Timeout';
-$string['requesttimeout_desc'] = 'Timeout in seconds for PayU requests.';
 $string['sandbox'] = 'Sandbox';
