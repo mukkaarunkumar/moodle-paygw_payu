@@ -402,7 +402,6 @@ class payu_helper {
                 'invalidtxnid',
                 'paygw_payu'
             );
-            
         }
     }
 
